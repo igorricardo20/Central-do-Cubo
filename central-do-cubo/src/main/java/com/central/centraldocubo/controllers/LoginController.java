@@ -27,12 +27,14 @@ public class LoginController {
 		String password = usuario.getPassword();
 		
 		if ("admin".equals(user) && "admin".equals(password)) {
+			model.addAttribute("hidden", "hidden");
 			return "redirect:/";
 		}
 		else {
 			if (usuarioRepository.existsByUser(user)) {
 				Usuario foundUser = usuarioRepository.findByUser(user);
-				if (foundUser.getPassword().equals(password)) { 
+				if (foundUser.getPassword().equals(password)) {
+					model.addAttribute("hidden", "hidden");
 					return "redirect:/";
 				}
 				else {
