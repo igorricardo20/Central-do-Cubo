@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8">
+	<title>Central do Cubo</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="tutorial/css/tutorial.css" crossorigin="anonymous">
+</head>
+<body>
+	
+	<nav class="navbar navbar-light bg-light">
+	  <a class="navbar-brand" href="/">
+	    <img src="bootstrap/icons/rubik.png" width="32" height="32" class="d-inline-block align-top" alt="">
+	    Central do Cubo
+	  </a>
+	</nav>
+	
+
+	<div class="jumbotron conteiner1">
+		<h3>Cadastrar Usuário</h3>
+		
+		<form method="post">
+		  <div class="form-group">
+		    <label for="name">Nome</label>
+		    <input type="text" class="form-control" id="name" placeholder="Digite o nome" name="name">
+		  </div>
+		  <div class="form-group">
+		    <label for="user">Usuário</label>
+		    <input type="text" class="form-control" id="user" placeholder="Crie seu usuário" name="user">
+		  </div>
+		  <div class="form-group">
+		    <label for="password">Senha</label>
+		    <input type="password" class="form-control" id="password" placeholder="Digite sua senha" name="password">
+		  </div>
+
+		  <button type="Submit" class="btn btn-primary">Salvar</button>
+		  <a href="/login" role="button" class="btn btn-secondary">Voltar</a>
+		</form>
+	</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

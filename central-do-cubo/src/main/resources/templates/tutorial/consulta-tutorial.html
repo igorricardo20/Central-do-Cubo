@@ -44,34 +44,51 @@
 		
 		<h3>Tutoriais</h3>
 		
-		<a class="btn btn-primary tutorial" href="/cadastro-tutorial" role="button" ${hidden}>Cadastrar Tutorial</a>
-		<table class="table table-hover">
+		<a class="btn btn-primary tutorial" href="/cadastro-tutorial" role="button" id="registerButton">Cadastrar Tutorial</a>
+		<table class="table table-hover" id="table"s>
 		  <thead>
 		    <tr>
 		      <th scope="col">Nome</th>
 		      <th scope="col">Descrição</th>
 		      <th scope="col">Dificuldade</th>
 		      <th scope="col">Link</th>
-		      <th scope="col">Ação</th>
+		      <th scope="col" class="action">Ação</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 			<tr th:each="tutorial: ${tutoriais}">
-				<td><span th:text="${tutorial.name}"></span></a></td>
-				<td><span th:text="${tutorial.description}"></span></a></td>
-				<td><span th:text="${tutorial.dificulty}"></span></a></td>
+				<td><span th:text="${tutorial.name}"></span></td>
+				<td><span th:text="${tutorial.description}"></span></td>
+				<td><span th:text="${tutorial.dificulty}"></span></td>
 				<td><a th:href="${tutorial.link}" target="_blank">Acessar</a></td>
-				<td><a th:href="${tutorial.code}">Deletar</a></td>
+				<td id="deleteCell" class="action"><a th:href="${tutorial.code}">Deletar</a></td>
 			</tr>
 		  </tbody>
 		</table>	
 	
 	</div>
+	
 
 
 	
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+$( document ).ready(function() {
+	function validateRoleList(){
+		var role = sessionStorage.getItem("Role");
+		if(role !=="admin")
+		{
+			document.getElementById("registerButton").style.display = "none";
+			
+		    var column = "table .action";
+		    $(column).hide();
+			
+		}
+	}
+	validateRoleList();
+});
+</script>
 </body>
 </html>
