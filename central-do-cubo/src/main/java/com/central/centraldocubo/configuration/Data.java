@@ -19,9 +19,9 @@ public class Data {
 //		dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/centraldocubo?useTimezone=true&serverTimezone=UTC");
 //		dataSource.setUsername("root");
 //		dataSource.setPassword("149767");
-		dataSource.setUrl("jdbc:mysql://sql10.freemysqlhosting.net/sql10281863?useTimezone=true&serverTimezone=UTC");
-		dataSource.setUsername("sql10281863");
-		dataSource.setPassword("31PQxx7AX7");
+		dataSource.setUrl("jdbc:mysql://sql10.freemysqlhosting.net/sql10287082?useTimezone=true&serverTimezone=UTC");
+		dataSource.setUsername("sql10287082");
+		dataSource.setPassword("BrVZxlBTw2");
 		return dataSource;
 	}
 	
